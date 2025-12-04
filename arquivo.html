@@ -7,19 +7,32 @@
 </div>
 <style>
   .cta-button{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.6rem 1rem;
-    background: #0070f3;
-    color: #ffffff;
+    background: #ffffff; /* branco conforme solicitado */
+    color: #0b1724; /* texto escuro para contraste */
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    box-shadow: 0 6px 18px rgba(2,6,23,0.12);
-    transition: transform .08s ease, box-shadow .08s ease, opacity .12s ease;
+    border: 1px solid rgba(2,6,23,0.06);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+    transition: transform .08s ease, box-shadow .12s ease, opacity .12s ease;
     -webkit-font-smoothing:antialiased;
   }
   .cta-button:active{ transform: translateY(1px); }
-  .cta-button:hover{ opacity: .95; }
+  .cta-button:hover{ box-shadow: 0 10px 26px rgba(2,6,23,0.09); }
+  .cta-button:focus{ outline: 3px solid rgba(0,112,243,0.12); outline-offset: 3px; }
+
+  .cta-icon{ width: 1rem; height: 1rem; display: inline-block; vertical-align: middle; fill: currentColor; }
 </style>
 
-<a class="cta-button" href="https://www.canva.com/design/DAG6freCOXY/07s_LHsR8cayvXkPc3DVgw/view?utm_content=DAG6freCOXY&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" role="button">Agende uma consulta hoje</a> de Pablo Ledesma
+<a class="cta-button" href="https://www.canva.com/design/DAG6freCOXY/07s_LHsR8cayvXkPc3DVgw/view?utm_content=DAG6freCOXY&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" role="button" aria-label="Agende uma consulta com Pablo Ledesma" title="Agende uma consulta com Pablo Ledesma">
+  <!-- ícone de calendário (inline SVG) -->
+  <svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 10h5v5H7z" opacity="0.01"></path>
+    <path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM5 20V9h14v11H5zM7 11v2h2v-2H7z"/>
+  </svg>
+  <span>Agende uma consulta</span>
+</a> de Pablo Ledesma
